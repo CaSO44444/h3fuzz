@@ -1,4 +1,5 @@
 # -*-coding:utf-8 -*-
+import json
 import os
 import pickle
 import time
@@ -249,8 +250,11 @@ class AutoLogin:
                 request_response_pairs.append(request_info)
 
             # 打印所有请求和响应信息
-            for data in request_response_pairs:
-                print(data['url'])
+            # for data in request_response_pairs:
+            #     print(data['url'])
+            # 将所有请求和响应信息存储为JSON文件
+            with open('request_response_pairs.json', 'w') as f:
+                json.dump(request_response_pairs, f, indent=4)
             # for data in request_response_pairs:
             #     print(data)
 
