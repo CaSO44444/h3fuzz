@@ -1,0 +1,12 @@
+# 登录账户密码
+Credentials:
+  - username: "202322080127"
+    password: "Lyj13979065224!"
+  - username: "admin"
+    password: "root"
+# 测试目标
+Urls:
+  - url: "http://shitang.7zwd.com/"
+# 维持登录字段
+LoginParameters:
+  - key: "cookie"
