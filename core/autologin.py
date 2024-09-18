@@ -14,6 +14,7 @@ from seleniumwire import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from lib.ocr import *
+from lib.read_json import write_data_to_file
 
 
 class AutoLogin:
@@ -253,10 +254,7 @@ class AutoLogin:
             # for data in request_response_pairs:
             #     print(data['url'])
             # 将所有请求和响应信息存储为JSON文件
-            with open('request_response_pairs.json', 'w') as f:
-                json.dump(request_response_pairs, f, indent=4)
-            # for data in request_response_pairs:
-            #     print(data)
+            write_data_to_file("request_response_pairs.json",request_response_pairs)
 
     def find_click_navi(self):
         original_url = self.driver.current_url
